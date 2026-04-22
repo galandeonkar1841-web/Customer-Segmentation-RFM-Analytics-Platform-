@@ -1,0 +1,2 @@
+table_name,total_rows,null_customer_id,null_dates,bad_prices,returns,return_rate_pct
+transactions,5213,0,0,0,104,2.0

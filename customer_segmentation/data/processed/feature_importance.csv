@@ -1,0 +1,6 @@
+feature,mean,std_dev,min,max,use_in_ml,notes
+recency_days,265.103,334.57,1.0,1071.0,Yes,Normalise before model training
+frequency,8.515,7.231,1.0,30.0,Yes,Normalise before model training
+monetary,504.514,650.2,4.32,2805.38,Yes,Normalise before model training
+avg_order_value,45.415,22.994,4.32,116.12,Yes,Normalise before model training
+return_rate_pct,2.045,6.506,0.0,50.0,Yes,Normalise before model training

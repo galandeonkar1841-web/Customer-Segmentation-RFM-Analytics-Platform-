@@ -1,0 +1,9 @@
+segment,customer_count,pct_of_customers,avg_recency_days,avg_frequency,avg_monetary,total_revenue,recommendation
+Champion,148,24.7,9.2,18.5,1392.87,206144.76,Reward with loyalty perks; ask for reviews/referrals
+Loyal Customer,81,13.5,34.0,9.3,492.57,39898.54,Upsell premium products; offer early access
+At Risk,94,15.7,541.1,8.3,305.33,28701.06,Win-back campaigns; survey on satisfaction
+Need Attention,69,11.5,169.8,3.1,115.32,7957.23,Targeted discount; limited-time offer
+Hibernating,112,18.7,741.0,2.5,66.72,7472.26,Low-cost email nudge; product updates
+New Customer,64,10.7,13.3,2.7,106.01,6784.77,Onboarding emails; guide to best-sellers
+Potential Loyalist,21,3.5,32.7,5.2,168.33,3535.01,Membership offers; personalised recommendations
+Lost,11,1.8,713.1,4.9,201.35,2214.81,Last-chance deep discount; or remove from list

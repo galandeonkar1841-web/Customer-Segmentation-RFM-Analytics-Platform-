@@ -1,0 +1,11 @@
+# ── Core pipeline (Steps 1-5) ──────────────────────────────────────────────
+# Uses ONLY Python standard library - NO pip install needed:
+#   csv, sqlite3, json, os, math, collections, datetime, random
+
+# ── Optional: run with pandas + scikit-learn (industry standard) ────────────
+# pip install pandas scikit-learn matplotlib seaborn
+# Then replace rfm_segmentation.py with the sklearn version (see README)
+
+# ── Optional: Power BI / Tableau connection ─────────────────────────────────
+# Export data/processed/rfm_scored.csv directly into Power BI Desktop
+# or Tableau Public - no extra packages needed.

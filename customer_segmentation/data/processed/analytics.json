@@ -1,0 +1,1990 @@
+{
+  "kpis": {
+    "total_revenue": 302708.44,
+    "total_customers": 600,
+    "avg_order_value": 59.25,
+    "avg_frequency": 8.5,
+    "avg_recency_days": 265.1,
+    "champion_count": 148,
+    "at_risk_count": 94,
+    "at_risk_pct": 15.7,
+    "data_quality_score": 100.0
+  },
+  "segments": [
+    {
+      "segment": "Champion",
+      "count": 148,
+      "pct": 24.7,
+      "avg_monetary": 1392.87,
+      "total_revenue": 206144.76,
+      "recommendation": "Reward with loyalty perks; ask for reviews/referrals"
+    },
+    {
+      "segment": "Loyal Customer",
+      "count": 81,
+      "pct": 13.5,
+      "avg_monetary": 492.57,
+      "total_revenue": 39898.54,
+      "recommendation": "Upsell premium products; offer early access"
+    },
+    {
+      "segment": "At Risk",
+      "count": 94,
+      "pct": 15.7,
+      "avg_monetary": 305.33,
+      "total_revenue": 28701.06,
+      "recommendation": "Win-back campaigns; survey on satisfaction"
+    },
+    {
+      "segment": "Need Attention",
+      "count": 69,
+      "pct": 11.5,
+      "avg_monetary": 115.32,
+      "total_revenue": 7957.23,
+      "recommendation": "Targeted discount; limited-time offer"
+    },
+    {
+      "segment": "Hibernating",
+      "count": 112,
+      "pct": 18.7,
+      "avg_monetary": 66.72,
+      "total_revenue": 7472.26,
+      "recommendation": "Low-cost email nudge; product updates"
+    },
+    {
+      "segment": "New Customer",
+      "count": 64,
+      "pct": 10.7,
+      "avg_monetary": 106.01,
+      "total_revenue": 6784.77,
+      "recommendation": "Onboarding emails; guide to best-sellers"
+    },
+    {
+      "segment": "Potential Loyalist",
+      "count": 21,
+      "pct": 3.5,
+      "avg_monetary": 168.33,
+      "total_revenue": 3535.01,
+      "recommendation": "Membership offers; personalised recommendations"
+    },
+    {
+      "segment": "Lost",
+      "count": 11,
+      "pct": 1.8,
+      "avg_monetary": 201.35,
+      "total_revenue": 2214.81,
+      "recommendation": "Last-chance deep discount; or remove from list"
+    }
+  ],
+  "rfm_scatter": [
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2805.38,
+      "customer_id": "C0214"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2683.67,
+      "customer_id": "C0303"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2645.45,
+      "customer_id": "C0401"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2466.04,
+      "customer_id": "C0210"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2395.13,
+      "customer_id": "C0104"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2336.03,
+      "customer_id": "C0014"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2290.84,
+      "customer_id": "C0204"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2260.99,
+      "customer_id": "C0511"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2221.51,
+      "customer_id": "C0009"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2181.31,
+      "customer_id": "C0013"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2087.7,
+      "customer_id": "C0403"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2073.52,
+      "customer_id": "C0313"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2038.22,
+      "customer_id": "C0501"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 2009.06,
+      "customer_id": "C0010"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1953.85,
+      "customer_id": "C0200"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1904.81,
+      "customer_id": "C0208"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1881.65,
+      "customer_id": "C0502"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1828.23,
+      "customer_id": "C0110"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1765.97,
+      "customer_id": "C0309"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1721.74,
+      "customer_id": "C0411"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1691.62,
+      "customer_id": "C0308"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1640.54,
+      "customer_id": "C0512"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1603.08,
+      "customer_id": "C0506"
+    },
+    {
+      "r": 3,
+      "f": 5,
+      "m": 5,
+      "segment": "Loyal Customer",
+      "monetary": 1513.7,
+      "customer_id": "C0108"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1465.81,
+      "customer_id": "C0500"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1439.6,
+      "customer_id": "C0300"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1359.34,
+      "customer_id": "C0011"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1322.99,
+      "customer_id": "C0509"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1313.29,
+      "customer_id": "C0003"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1229.95,
+      "customer_id": "C0107"
+    },
+    {
+      "r": 4,
+      "f": 4,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 1057.4,
+      "customer_id": "C0519"
+    },
+    {
+      "r": 3,
+      "f": 5,
+      "m": 5,
+      "segment": "Loyal Customer",
+      "monetary": 1003.61,
+      "customer_id": "C0434"
+    },
+    {
+      "r": 3,
+      "f": 5,
+      "m": 5,
+      "segment": "Loyal Customer",
+      "monetary": 841.32,
+      "customer_id": "C0024"
+    },
+    {
+      "r": 3,
+      "f": 5,
+      "m": 5,
+      "segment": "Loyal Customer",
+      "monetary": 826.93,
+      "customer_id": "C0016"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 809.58,
+      "customer_id": "C0126"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 5,
+      "segment": "Loyal Customer",
+      "monetary": 773.91,
+      "customer_id": "C0315"
+    },
+    {
+      "r": 4,
+      "f": 4,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 761.24,
+      "customer_id": "C0023"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 757.43,
+      "customer_id": "C0418"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 5,
+      "segment": "Loyal Customer",
+      "monetary": 732.31,
+      "customer_id": "C0132"
+    },
+    {
+      "r": 4,
+      "f": 4,
+      "m": 5,
+      "segment": "Champion",
+      "monetary": 717.24,
+      "customer_id": "C0015"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 704.18,
+      "customer_id": "C0215"
+    },
+    {
+      "r": 4,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 676.13,
+      "customer_id": "C0018"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 649.47,
+      "customer_id": "C0030"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 638.98,
+      "customer_id": "C0031"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 629.87,
+      "customer_id": "C0225"
+    },
+    {
+      "r": 4,
+      "f": 5,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 619.27,
+      "customer_id": "C0425"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 611.39,
+      "customer_id": "C0521"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 603.8,
+      "customer_id": "C0417"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 575.7,
+      "customer_id": "C0534"
+    },
+    {
+      "r": 5,
+      "f": 5,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 558.92,
+      "customer_id": "C0319"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 550.59,
+      "customer_id": "C0219"
+    },
+    {
+      "r": 4,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 529.56,
+      "customer_id": "C0224"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 522.13,
+      "customer_id": "C0052"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 518.97,
+      "customer_id": "C0116"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 514.32,
+      "customer_id": "C0230"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 507.4,
+      "customer_id": "C0528"
+    },
+    {
+      "r": 5,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 497.52,
+      "customer_id": "C0330"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 490.79,
+      "customer_id": "C0221"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 476.47,
+      "customer_id": "C0228"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 468.42,
+      "customer_id": "C0353"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 459.32,
+      "customer_id": "C0423"
+    },
+    {
+      "r": 3,
+      "f": 4,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 450.22,
+      "customer_id": "C0131"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 445.41,
+      "customer_id": "C0541"
+    },
+    {
+      "r": 1,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 436.28,
+      "customer_id": "C0443"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 424.58,
+      "customer_id": "C0335"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 421.6,
+      "customer_id": "C0119"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 411.09,
+      "customer_id": "C0294"
+    },
+    {
+      "r": 4,
+      "f": 4,
+      "m": 4,
+      "segment": "Champion",
+      "monetary": 394.86,
+      "customer_id": "C0427"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 389.42,
+      "customer_id": "C0451"
+    },
+    {
+      "r": 1,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 380.6,
+      "customer_id": "C0050"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 377.53,
+      "customer_id": "C0590"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 371.7,
+      "customer_id": "C0331"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 368.11,
+      "customer_id": "C0154"
+    },
+    {
+      "r": 4,
+      "f": 2,
+      "m": 4,
+      "segment": "New Customer",
+      "monetary": 362.14,
+      "customer_id": "C0289"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 358.81,
+      "customer_id": "C0133"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 352.23,
+      "customer_id": "C0041"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 4,
+      "segment": "Need Attention",
+      "monetary": 349.12,
+      "customer_id": "C0097"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 343.2,
+      "customer_id": "C0444"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 4,
+      "segment": "At Risk",
+      "monetary": 334.13,
+      "customer_id": "C0053"
+    },
+    {
+      "r": 5,
+      "f": 3,
+      "m": 4,
+      "segment": "Loyal Customer",
+      "monetary": 328.53,
+      "customer_id": "C0485"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 327.04,
+      "customer_id": "C0442"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 322.43,
+      "customer_id": "C0536"
+    },
+    {
+      "r": 1,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 314.05,
+      "customer_id": "C0045"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 307.82,
+      "customer_id": "C0244"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 3,
+      "segment": "Need Attention",
+      "monetary": 302.95,
+      "customer_id": "C0051"
+    },
+    {
+      "r": 1,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 297.79,
+      "customer_id": "C0136"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 292.34,
+      "customer_id": "C0585"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 287.36,
+      "customer_id": "C0548"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 284.52,
+      "customer_id": "C0537"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 278.07,
+      "customer_id": "C0138"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 274.83,
+      "customer_id": "C0254"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 271.02,
+      "customer_id": "C0385"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 269.67,
+      "customer_id": "C0343"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 3,
+      "segment": "Potential Loyalist",
+      "monetary": 263.13,
+      "customer_id": "C0592"
+    },
+    {
+      "r": 1,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 259.99,
+      "customer_id": "C0348"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 256.76,
+      "customer_id": "C0354"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 3,
+      "segment": "Loyal Customer",
+      "monetary": 255.35,
+      "customer_id": "C0188"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 3,
+      "segment": "Lost",
+      "monetary": 251.61,
+      "customer_id": "C0356"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 3,
+      "segment": "Need Attention",
+      "monetary": 245.05,
+      "customer_id": "C0349"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 242.51,
+      "customer_id": "C0147"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 239.41,
+      "customer_id": "C0445"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 3,
+      "segment": "Loyal Customer",
+      "monetary": 231.75,
+      "customer_id": "C0193"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 3,
+      "segment": "Potential Loyalist",
+      "monetary": 229.63,
+      "customer_id": "C0598"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 3,
+      "segment": "Need Attention",
+      "monetary": 227.01,
+      "customer_id": "C0388"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 224.87,
+      "customer_id": "C0553"
+    },
+    {
+      "r": 5,
+      "f": 3,
+      "m": 3,
+      "segment": "Loyal Customer",
+      "monetary": 222.97,
+      "customer_id": "C0596"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 3,
+      "segment": "Potential Loyalist",
+      "monetary": 220.81,
+      "customer_id": "C0186"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 3,
+      "segment": "Loyal Customer",
+      "monetary": 218.62,
+      "customer_id": "C0489"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 217.51,
+      "customer_id": "C0246"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 213.09,
+      "customer_id": "C0453"
+    },
+    {
+      "r": 2,
+      "f": 4,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 208.66,
+      "customer_id": "C0048"
+    },
+    {
+      "r": 4,
+      "f": 2,
+      "m": 3,
+      "segment": "New Customer",
+      "monetary": 205.6,
+      "customer_id": "C0087"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 3,
+      "segment": "Potential Loyalist",
+      "monetary": 202.25,
+      "customer_id": "C0395"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 3,
+      "segment": "At Risk",
+      "monetary": 201.2,
+      "customer_id": "C0450"
+    },
+    {
+      "r": 4,
+      "f": 3,
+      "m": 3,
+      "segment": "Loyal Customer",
+      "monetary": 198.47,
+      "customer_id": "C0090"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 3,
+      "segment": "Need Attention",
+      "monetary": 197.37,
+      "customer_id": "C0571"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 3,
+      "segment": "Potential Loyalist",
+      "monetary": 196.19,
+      "customer_id": "C0198"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 3,
+      "segment": "Loyal Customer",
+      "monetary": 193.97,
+      "customer_id": "C0587"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 3,
+      "segment": "Lost",
+      "monetary": 191.19,
+      "customer_id": "C0347"
+    },
+    {
+      "r": 4,
+      "f": 2,
+      "m": 3,
+      "segment": "New Customer",
+      "monetary": 185.49,
+      "customer_id": "C0192"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 2,
+      "segment": "Potential Loyalist",
+      "monetary": 181.9,
+      "customer_id": "C0091"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 179.4,
+      "customer_id": "C0239"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 175.49,
+      "customer_id": "C0554"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 173.1,
+      "customer_id": "C0436"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 170.47,
+      "customer_id": "C0047"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 167.44,
+      "customer_id": "C0151"
+    },
+    {
+      "r": 4,
+      "f": 3,
+      "m": 2,
+      "segment": "Potential Loyalist",
+      "monetary": 161.64,
+      "customer_id": "C0096"
+    },
+    {
+      "r": 4,
+      "f": 1,
+      "m": 2,
+      "segment": "New Customer",
+      "monetary": 158.3,
+      "customer_id": "C0071"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 157.13,
+      "customer_id": "C0487"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 151.38,
+      "customer_id": "C0493"
+    },
+    {
+      "r": 2,
+      "f": 3,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 145.14,
+      "customer_id": "C0452"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 141.49,
+      "customer_id": "C0595"
+    },
+    {
+      "r": 5,
+      "f": 3,
+      "m": 2,
+      "segment": "Potential Loyalist",
+      "monetary": 139.15,
+      "customer_id": "C0296"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 2,
+      "segment": "Potential Loyalist",
+      "monetary": 137.49,
+      "customer_id": "C0197"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 133.5,
+      "customer_id": "C0396"
+    },
+    {
+      "r": 3,
+      "f": 2,
+      "m": 2,
+      "segment": "Potential Loyalist",
+      "monetary": 129.76,
+      "customer_id": "C0387"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 128.59,
+      "customer_id": "C0143"
+    },
+    {
+      "r": 4,
+      "f": 1,
+      "m": 2,
+      "segment": "New Customer",
+      "monetary": 125.47,
+      "customer_id": "C0281"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 2,
+      "segment": "New Customer",
+      "monetary": 122.25,
+      "customer_id": "C0383"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 120.96,
+      "customer_id": "C0036"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 120.48,
+      "customer_id": "C0174"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 117.66,
+      "customer_id": "C0361"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 112.83,
+      "customer_id": "C0550"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 110.38,
+      "customer_id": "C0291"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 108.74,
+      "customer_id": "C0365"
+    },
+    {
+      "r": 2,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 107.23,
+      "customer_id": "C0342"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 103.95,
+      "customer_id": "C0163"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 101.26,
+      "customer_id": "C0158"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 99.79,
+      "customer_id": "C0372"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 97.64,
+      "customer_id": "C0166"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 96.61,
+      "customer_id": "C0075"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 2,
+      "segment": "Need Attention",
+      "monetary": 94.63,
+      "customer_id": "C0475"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 94.31,
+      "customer_id": "C0462"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 2,
+      "segment": "New Customer",
+      "monetary": 92.44,
+      "customer_id": "C0282"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 90.16,
+      "customer_id": "C0182"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 85.42,
+      "customer_id": "C0257"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 83.22,
+      "customer_id": "C0562"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 78.09,
+      "customer_id": "C0060"
+    },
+    {
+      "r": 4,
+      "f": 1,
+      "m": 2,
+      "segment": "New Customer",
+      "monetary": 76.18,
+      "customer_id": "C0272"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 2,
+      "segment": "Hibernating",
+      "monetary": 75.25,
+      "customer_id": "C0466"
+    },
+    {
+      "r": 3,
+      "f": 3,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 71.75,
+      "customer_id": "C0199"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 69.89,
+      "customer_id": "C0469"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 67.66,
+      "customer_id": "C0065"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 65.28,
+      "customer_id": "C0564"
+    },
+    {
+      "r": 1,
+      "f": 2,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 63.66,
+      "customer_id": "C0561"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 62.29,
+      "customer_id": "C0378"
+    },
+    {
+      "r": 4,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 61.23,
+      "customer_id": "C0371"
+    },
+    {
+      "r": 4,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 59.36,
+      "customer_id": "C0576"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 58.64,
+      "customer_id": "C0172"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 56.64,
+      "customer_id": "C0180"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 52.56,
+      "customer_id": "C0476"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 51.22,
+      "customer_id": "C0362"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 49.37,
+      "customer_id": "C0155"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 48.64,
+      "customer_id": "C0156"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 47.4,
+      "customer_id": "C0474"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 46.17,
+      "customer_id": "C0273"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 45.32,
+      "customer_id": "C0080"
+    },
+    {
+      "r": 2,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 41.89,
+      "customer_id": "C0086"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 41.46,
+      "customer_id": "C0276"
+    },
+    {
+      "r": 4,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 38.88,
+      "customer_id": "C0190"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 37.46,
+      "customer_id": "C0057"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 36.15,
+      "customer_id": "C0471"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 32.5,
+      "customer_id": "C0483"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 31.19,
+      "customer_id": "C0377"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 28.45,
+      "customer_id": "C0455"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 27.19,
+      "customer_id": "C0367"
+    },
+    {
+      "r": 5,
+      "f": 1,
+      "m": 1,
+      "segment": "New Customer",
+      "monetary": 26.09,
+      "customer_id": "C0484"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 25.59,
+      "customer_id": "C0456"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 24.29,
+      "customer_id": "C0566"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 23.5,
+      "customer_id": "C0568"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 22.92,
+      "customer_id": "C0277"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 22.7,
+      "customer_id": "C0458"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 17.73,
+      "customer_id": "C0081"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 15.77,
+      "customer_id": "C0263"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 14.43,
+      "customer_id": "C0572"
+    },
+    {
+      "r": 3,
+      "f": 1,
+      "m": 1,
+      "segment": "Need Attention",
+      "monetary": 13.1,
+      "customer_id": "C0570"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 11.48,
+      "customer_id": "C0357"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 9.0,
+      "customer_id": "C0068"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 7.85,
+      "customer_id": "C0363"
+    },
+    {
+      "r": 1,
+      "f": 1,
+      "m": 1,
+      "segment": "Hibernating",
+      "monetary": 6.71,
+      "customer_id": "C0256"
+    }
+  ],
+  "monthly_trend": [
+    {
+      "month": "2022-01",
+      "revenue": 633.16,
+      "customers": 18,
+      "transactions": 21
+    },
+    {
+      "month": "2022-02",
+      "revenue": 294.93,
+      "customers": 12,
+      "transactions": 12
+    },
+    {
+      "month": "2022-03",
+      "revenue": 332.06,
+      "customers": 12,
+      "transactions": 14
+    },
+    {
+      "month": "2022-04",
+      "revenue": 579.18,
+      "customers": 16,
+      "transactions": 17
+    },
+    {
+      "month": "2022-05",
+      "revenue": 592.74,
+      "customers": 20,
+      "transactions": 23
+    },
+    {
+      "month": "2022-06",
+      "revenue": 2609.05,
+      "customers": 74,
+      "transactions": 92
+    },
+    {
+      "month": "2022-07",
+      "revenue": 2850.03,
+      "customers": 76,
+      "transactions": 98
+    },
+    {
+      "month": "2022-08",
+      "revenue": 2825.47,
+      "customers": 67,
+      "transactions": 84
+    },
+    {
+      "month": "2022-09",
+      "revenue": 2781.59,
+      "customers": 64,
+      "transactions": 79
+    },
+    {
+      "month": "2022-10",
+      "revenue": 2387.18,
+      "customers": 57,
+      "transactions": 76
+    },
+    {
+      "month": "2022-11",
+      "revenue": 2851.81,
+      "customers": 67,
+      "transactions": 92
+    },
+    {
+      "month": "2022-12",
+      "revenue": 3484.87,
+      "customers": 70,
+      "transactions": 92
+    },
+    {
+      "month": "2023-01",
+      "revenue": 2359.07,
+      "customers": 48,
+      "transactions": 60
+    },
+    {
+      "month": "2023-02",
+      "revenue": 1686.58,
+      "customers": 53,
+      "transactions": 65
+    },
+    {
+      "month": "2023-03",
+      "revenue": 2771.66,
+      "customers": 59,
+      "transactions": 83
+    },
+    {
+      "month": "2023-04",
+      "revenue": 2290.14,
+      "customers": 57,
+      "transactions": 74
+    },
+    {
+      "month": "2023-05",
+      "revenue": 2103.35,
+      "customers": 51,
+      "transactions": 61
+    },
+    {
+      "month": "2023-06",
+      "revenue": 3029.92,
+      "customers": 65,
+      "transactions": 82
+    },
+    {
+      "month": "2024-01",
+      "revenue": 5689.23,
+      "customers": 73,
+      "transactions": 120
+    },
+    {
+      "month": "2024-02",
+      "revenue": 5127.6,
+      "customers": 58,
+      "transactions": 97
+    },
+    {
+      "month": "2024-03",
+      "revenue": 6913.82,
+      "customers": 110,
+      "transactions": 155
+    },
+    {
+      "month": "2024-04",
+      "revenue": 6666.8,
+      "customers": 100,
+      "transactions": 135
+    },
+    {
+      "month": "2024-05",
+      "revenue": 7961.6,
+      "customers": 100,
+      "transactions": 152
+    },
+    {
+      "month": "2024-06",
+      "revenue": 30675.89,
+      "customers": 199,
+      "transactions": 449
+    },
+    {
+      "month": "2024-07",
+      "revenue": 31641.74,
+      "customers": 189,
+      "transactions": 437
+    },
+    {
+      "month": "2024-08",
+      "revenue": 33884.88,
+      "customers": 201,
+      "transactions": 478
+    },
+    {
+      "month": "2024-09",
+      "revenue": 31809.94,
+      "customers": 197,
+      "transactions": 443
+    },
+    {
+      "month": "2024-10",
+      "revenue": 33965.07,
+      "customers": 237,
+      "transactions": 515
+    },
+    {
+      "month": "2024-11",
+      "revenue": 37150.85,
+      "customers": 259,
+      "transactions": 551
+    },
+    {
+      "month": "2024-12",
+      "revenue": 34758.23,
+      "customers": 270,
+      "transactions": 556
+    }
+  ],
+  "category": [
+    {
+      "category": "Home Decor",
+      "revenue": 121552.91,
+      "share_pct": 40.2,
+      "customers": 496
+    },
+    {
+      "category": "Kitchenware",
+      "revenue": 96485.04,
+      "share_pct": 31.9,
+      "customers": 509
+    },
+    {
+      "category": "Textiles",
+      "revenue": 43249.25,
+      "share_pct": 14.3,
+      "customers": 367
+    },
+    {
+      "category": "Bath & Body",
+      "revenue": 17276.66,
+      "share_pct": 5.7,
+      "customers": 273
+    },
+    {
+      "category": "Storage",
+      "revenue": 16413.45,
+      "share_pct": 5.4,
+      "customers": 186
+    },
+    {
+      "category": "Garden",
+      "revenue": 7731.13,
+      "share_pct": 2.6,
+      "customers": 184
+    }
+  ],
+  "country": [
+    {
+      "country": "Portugal",
+      "revenue": 39261.08,
+      "customers": 75,
+      "rev_per_customer": 523.48
+    },
+    {
+      "country": "France",
+      "revenue": 36989.71,
+      "customers": 60,
+      "rev_per_customer": 616.5
+    },
+    {
+      "country": "Australia",
+      "revenue": 32146.65,
+      "customers": 56,
+      "rev_per_customer": 574.05
+    },
+    {
+      "country": "Netherlands",
+      "revenue": 31687.99,
+      "customers": 70,
+      "rev_per_customer": 452.69
+    },
+    {
+      "country": "United Kingdom",
+      "revenue": 30837.85,
+      "customers": 55,
+      "rev_per_customer": 560.69
+    },
+    {
+      "country": "Belgium",
+      "revenue": 29774.84,
+      "customers": 58,
+      "rev_per_customer": 513.36
+    },
+    {
+      "country": "Switzerland",
+      "revenue": 27606.03,
+      "customers": 62,
+      "rev_per_customer": 445.26
+    },
+    {
+      "country": "Spain",
+      "revenue": 25461.79,
+      "customers": 49,
+      "rev_per_customer": 519.63
+    },
+    {
+      "country": "USA",
+      "revenue": 25024.05,
+      "customers": 57,
+      "rev_per_customer": 439.02
+    },
+    {
+      "country": "Germany",
+      "revenue": 23918.45,
+      "customers": 58,
+      "rev_per_customer": 412.39
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": "High Value",
+      "count": 56,
+      "revenue": 122122.71
+    },
+    {
+      "cluster": "Mid Value",
+      "count": 117,
+      "revenue": 67802.33
+    },
+    {
+      "cluster": "Mid-High Value",
+      "count": 35,
+      "revenue": 51697.94
+    },
+    {
+      "cluster": "Low-Mid Value",
+      "count": 210,
+      "revenue": 36462.79
+    },
+    {
+      "cluster": "Low Value",
+      "count": 182,
+      "revenue": 24622.67
+    }
+  ]
+}

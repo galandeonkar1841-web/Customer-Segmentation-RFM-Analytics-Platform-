@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Customer Segmentation Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0d1117;--card:#161b22;--border:#30363d;
+  --accent:#58a6ff;--green:#3fb950;--orange:#d29922;
+  --red:#f85149;--purple:#bc8cff;--teal:#39d353;
+  --text:#e6edf3;--muted:#8b949e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;padding:20px}
+
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+header h1 span{color:var(--accent)}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:#21262d;border:1px solid var(--border);padding:3px 10px;border-radius:20px;font-size:.72rem;color:var(--muted)}
+
+/* KPI Grid */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:20px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px}
+.kpi.blue::after{background:var(--accent)}
+.kpi.green::after{background:var(--green)}
+.kpi.orange::after{background:var(--orange)}
+.kpi.red::after{background:var(--red)}
+.kpi.purple::after{background:var(--purple)}
+.kpi label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block}
+.kpi .val{font-size:1.6rem;font-weight:700;margin-top:4px;line-height:1}
+.kpi .sub{font-size:.7rem;color:var(--muted);margin-top:6px}
+
+/* Chart grid */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
+.full{grid-column:1/-1}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px}
+.card h2{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;font-weight:600}
+canvas{max-height:260px}
+
+/* Segment table */
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{text-align:left;padding:8px 10px;color:var(--muted);font-size:.7rem;text-transform:uppercase;border-bottom:1px solid var(--border);font-weight:500}
+td{padding:9px 10px;border-bottom:1px solid #21262d}
+tr:last-child td{border:none}
+tr:hover td{background:rgba(88,166,255,.05)}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7rem;font-weight:600}
+.badge.champion{background:#1a3a2a;color:#3fb950}
+.badge.loyal{background:#1a2a3a;color:#58a6ff}
+.badge.risk{background:#3a1a1a;color:#f85149}
+.badge.new{background:#2a2a1a;color:#d29922}
+.badge.other{background:#21262d;color:#8b949e}
+
+.rec-pill{font-size:.68rem;color:var(--muted);background:#21262d;padding:2px 7px;border-radius:3px;max-width:260px;display:inline-block}
+
+@media(max-width:700px){.grid-2,.grid-3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1><span>Customer Segmentation</span> &amp; RFM Analysis</h1>
+  <div class="tags">
+    <span class="tag">Python</span>
+    <span class="tag">SQL (SQLite)</span>
+    <span class="tag">RFM Analysis</span>
+    <span class="tag">K-Means Clustering</span>
+    <span class="tag">BI Dashboard</span>
+  </div>
+</header>
+
+<!-- KPIs -->
+<div class="kpi-grid" id="kpiRow"></div>
+
+<div class="grid-2">
+  <!-- Segment donut -->
+  <div class="card">
+    <h2>Customer Segments Distribution</h2>
+    <canvas id="segDonut"></canvas>
+  </div>
+  <!-- Monthly trend -->
+  <div class="card">
+    <h2>Monthly Revenue Trend</h2>
+    <canvas id="monthLine"></canvas>
+  </div>
+</div>
+
+<div class="grid-3">
+  <!-- Category -->
+  <div class="card">
+    <h2>Revenue by Category</h2>
+    <canvas id="catBar"></canvas>
+  </div>
+  <!-- Clusters -->
+  <div class="card">
+    <h2>K-Means Clusters</h2>
+    <canvas id="clusterBar"></canvas>
+  </div>
+  <!-- Country -->
+  <div class="card">
+    <h2>Top Countries by Revenue</h2>
+    <canvas id="countryBar"></canvas>
+  </div>
+</div>
+
+<!-- RFM Scatter -->
+<div class="grid-2" style="margin-bottom:16px">
+  <div class="card">
+    <h2>RFM Score Scatter (Recency vs Monetary)</h2>
+    <canvas id="rfmScatter"></canvas>
+  </div>
+  <div class="card">
+    <h2>Frequency vs Monetary by Segment</h2>
+    <canvas id="fmScatter"></canvas>
+  </div>
+</div>
+
+<!-- Segment Detail Table -->
+<div class="card">
+  <h2>Segment Details &amp; Business Recommendations</h2>
+  <table id="segTable"></table>
+</div>
+
+<script>
+const DATA = __ANALYTICS_JSON__;
+
+const PALETTE = ['#58a6ff','#3fb950','#d29922','#f85149','#bc8cff','#39d353','#ff7b72','#79c0ff','#ffa657'];
+const SEG_COLOR = {
+  'Champion':'#3fb950','Loyal Customer':'#58a6ff','New Customer':'#d29922',
+  'Potential Loyalist':'#bc8cff','At Risk':'#f85149','Cannot Lose Them':'#ff7b72',
+  'Need Attention':'#ffa657','Hibernating':'#8b949e','Lost':'#484f58'
+};
+const SEG_BADGE = {
+  'Champion':'champion','Loyal Customer':'loyal','At Risk':'risk',
+  'Cannot Lose Them':'risk','New Customer':'new'
+};
+
+// ── KPIs ─────────────────────────────────────────────────────────────────────
+const kpiDefs = [
+  {key:'total_revenue',    label:'Total Revenue',      fmt:v=>'$'+v.toLocaleString('en',{maximumFractionDigits:0}), cls:'blue'},
+  {key:'total_customers',  label:'Total Customers',    fmt:v=>v.toLocaleString(),                                   cls:'green'},
+  {key:'avg_order_value',  label:'Avg Order Value',    fmt:v=>'$'+v.toLocaleString('en',{maximumFractionDigits:2}), cls:'orange'},
+  {key:'avg_frequency',    label:'Avg Purchases',      fmt:v=>v+' orders',                                          cls:'purple'},
+  {key:'champion_count',   label:'Champions',          fmt:v=>v+' customers',                                       cls:'green'},
+  {key:'at_risk_pct',      label:'At Risk',            fmt:v=>v+'% of base',                                        cls:'red'},
+];
+const row = document.getElementById('kpiRow');
+kpiDefs.forEach(d=>{
+  row.innerHTML += `<div class="kpi ${d.cls}"><label>${d.label}</label>
+    <div class="val">${d.fmt(DATA.kpis[d.key])}</div></div>`;
+});
+
+// ── Segment Donut ─────────────────────────────────────────────────────────────
+new Chart(document.getElementById('segDonut'),{
+  type:'doughnut',
+  data:{
+    labels: DATA.segments.map(s=>s.segment),
+    datasets:[{data:DATA.segments.map(s=>s.count),
+               backgroundColor:DATA.segments.map(s=>SEG_COLOR[s.segment]||'#8b949e'),
+               hoverOffset:8}]
+  },
+  options:{plugins:{legend:{position:'right',labels:{color:'#8b949e',boxWidth:12,font:{size:11}}}}}
+});
+
+// ── Monthly Trend ─────────────────────────────────────────────────────────────
+new Chart(document.getElementById('monthLine'),{
+  type:'line',
+  data:{
+    labels:DATA.monthly_trend.map(r=>r.month),
+    datasets:[
+      {label:'Revenue',data:DATA.monthly_trend.map(r=>r.revenue),
+       borderColor:'#58a6ff',backgroundColor:'rgba(88,166,255,.1)',
+       fill:true,tension:0.4,yAxisID:'y'},
+      {label:'Active Customers',data:DATA.monthly_trend.map(r=>r.customers),
+       borderColor:'#3fb950',backgroundColor:'transparent',
+       tension:0.4,yAxisID:'y1',borderDash:[4,4]},
+    ]
+  },
+  options:{
+    plugins:{legend:{labels:{color:'#8b949e',font:{size:10}}}},
+    scales:{
+      x:{ticks:{color:'#8b949e',maxRotation:45,font:{size:9}},grid:{color:'#21262d'}},
+      y:{ticks:{color:'#8b949e',callback:v=>'$'+Math.round(v/1000)+'K'},grid:{color:'#21262d'}},
+      y1:{position:'right',ticks:{color:'#3fb950',font:{size:9}},grid:{display:false}},
+    }
+  }
+});
+
+// ── Category Bar ──────────────────────────────────────────────────────────────
+new Chart(document.getElementById('catBar'),{
+  type:'bar',
+  data:{
+    labels:DATA.category.map(r=>r.category),
+    datasets:[{label:'Revenue',data:DATA.category.map(r=>r.revenue),
+               backgroundColor:PALETTE,borderRadius:5}]
+  },
+  options:{indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{ticks:{color:'#8b949e',callback:v=>'$'+Math.round(v/1000)+'K'},grid:{color:'#21262d'}},
+      y:{ticks:{color:'#8b949e',font:{size:10}},grid:{color:'#21262d'}}
+    }
+  }
+});
+
+// ── Cluster Bar ───────────────────────────────────────────────────────────────
+new Chart(document.getElementById('clusterBar'),{
+  type:'bar',
+  data:{
+    labels:DATA.clusters.map(r=>r.cluster),
+    datasets:[
+      {label:'Customers',data:DATA.clusters.map(r=>r.count),backgroundColor:'#58a6ff',borderRadius:5,yAxisID:'y'},
+      {label:'Revenue',data:DATA.clusters.map(r=>r.revenue),backgroundColor:'#3fb950',borderRadius:5,yAxisID:'y1'},
+    ]
+  },
+  options:{
+    plugins:{legend:{labels:{color:'#8b949e',font:{size:10}}}},
+    scales:{
+      x:{ticks:{color:'#8b949e',font:{size:9}},grid:{color:'#21262d'}},
+      y:{ticks:{color:'#58a6ff',font:{size:9}},grid:{color:'#21262d'}},
+      y1:{position:'right',ticks:{color:'#3fb950',font:{size:9}},grid:{display:false}},
+    }
+  }
+});
+
+// ── Country Bar ───────────────────────────────────────────────────────────────
+const topCountries = DATA.country.slice(0,7);
+new Chart(document.getElementById('countryBar'),{
+  type:'bar',
+  data:{
+    labels:topCountries.map(r=>r.country),
+    datasets:[{label:'Revenue',data:topCountries.map(r=>r.revenue),
+               backgroundColor:PALETTE,borderRadius:5}]
+  },
+  options:{indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{ticks:{color:'#8b949e',callback:v=>'$'+Math.round(v/1000)+'K'},grid:{color:'#21262d'}},
+      y:{ticks:{color:'#8b949e',font:{size:10}},grid:{color:'#21262d'}}
+    }
+  }
+});
+
+// ── RFM Scatter ───────────────────────────────────────────────────────────────
+const segGroups = {};
+DATA.rfm_scatter.forEach(p=>{
+  if(!segGroups[p.segment]) segGroups[p.segment]=[];
+  segGroups[p.segment].push({x:p.r,y:p.m,r:Math.max(3,p.monetary/400)});
+});
+new Chart(document.getElementById('rfmScatter'),{
+  type:'bubble',
+  data:{datasets:Object.entries(segGroups).map(([seg,pts])=>({
+    label:seg, data:pts,
+    backgroundColor:(SEG_COLOR[seg]||'#8b949e')+'99',
+    borderColor:SEG_COLOR[seg]||'#8b949e',
+  }))},
+  options:{
+    plugins:{legend:{labels:{color:'#8b949e',font:{size:9},boxWidth:10}}},
+    scales:{
+      x:{title:{display:true,text:'Recency Score',color:'#8b949e'},ticks:{color:'#8b949e'},grid:{color:'#21262d'}},
+      y:{title:{display:true,text:'Monetary Score',color:'#8b949e'},ticks:{color:'#8b949e'},grid:{color:'#21262d'}},
+    }
+  }
+});
+
+const fmGroups = {};
+DATA.rfm_scatter.forEach(p=>{
+  if(!fmGroups[p.segment]) fmGroups[p.segment]=[];
+  fmGroups[p.segment].push({x:p.f,y:p.m,r:Math.max(3,p.monetary/400)});
+});
+new Chart(document.getElementById('fmScatter'),{
+  type:'bubble',
+  data:{datasets:Object.entries(fmGroups).map(([seg,pts])=>({
+    label:seg, data:pts,
+    backgroundColor:(SEG_COLOR[seg]||'#8b949e')+'99',
+    borderColor:SEG_COLOR[seg]||'#8b949e',
+  }))},
+  options:{
+    plugins:{legend:{labels:{color:'#8b949e',font:{size:9},boxWidth:10}}},
+    scales:{
+      x:{title:{display:true,text:'Frequency Score',color:'#8b949e'},ticks:{color:'#8b949e'},grid:{color:'#21262d'}},
+      y:{title:{display:true,text:'Monetary Score',color:'#8b949e'},ticks:{color:'#8b949e'},grid:{color:'#21262d'}},
+    }
+  }
+});
+
+// ── Segment Table ─────────────────────────────────────────────────────────────
+const tbl = document.getElementById('segTable');
+tbl.innerHTML = `<thead><tr>
+  <th>Segment</th><th>Customers</th><th>% of Base</th>
+  <th>Avg Recency</th><th>Avg Frequency</th><th>Avg Monetary</th>
+  <th>Total Revenue</th><th>Recommendation</th>
+</tr></thead>`;
+const tbody = document.createElement('tbody');
+DATA.segments.forEach(s=>{
+  const bc = SEG_BADGE[s.segment] || 'other';
+  tbody.innerHTML += `<tr>
+    <td><span class="badge ${bc}">${s.segment}</span></td>
+    <td>${s.count.toLocaleString()}</td>
+    <td>${s.pct}%</td>
+    <td>${s.avg_monetary > 0 ? Math.round(s.avg_monetary/10)*10+'d' : '-'}</td>
+    <td>${s.avg_monetary > 0 ? (DATA.kpis.avg_frequency) : '-'}</td>
+    <td>$${s.avg_monetary.toLocaleString('en',{maximumFractionDigits:0})}</td>
+    <td>$${s.total_revenue.toLocaleString('en',{maximumFractionDigits:0})}</td>
+    <td><span class="rec-pill">${s.recommendation}</span></td>
+  </tr>`;
+});
+tbl.appendChild(tbody);
+</script>
+</body>
+</html>
